@@ -1,0 +1,51 @@
+{
+  "navbar": {
+    "NavbarTitle":"貳零貳壹 加拿大遊記",
+    "NavbarItinerary":"旅行計畫",
+    "NavbarTransaction":"交易明細",
+    "NavbarBudgetCalculator":"預算試算機"
+  }, 
+  "dashboard": {
+    "Title": "儀表板",
+    "CardText1":"預算",
+    "CardText2":"支出",
+    "CardText3":"餘額",
+    "CardText4":"旅行天數",
+    "TotalExpenseTitle": "總花費",
+    "ExpenseStatisticsTitle":"花費統計",
+    "RecentTransactionsTitle":"最近交易紀録",
+    "TopExpencesTitle":"最高支出紀録"
+  }
+    ,
+  "charts": {
+    "FooterText":"Copyright © Zoe Wang Website 2024"
+  },
+  "itinerary": {
+  
+  },
+  "calculator": {
+    "Accommodation":"住宿費用",
+    "Food":"飲食費用",
+    "Transportation":"交通費用",
+    "Tuition":"教育費用",
+    "Entertainment":"休閒費用",
+    "Shopping":"購物費用",
+    "Insurance":"保險費用",
+    "Other":"其他",
+    "CalculatorListCol1":"項目",
+    "CalculatorListCol2":"預估費用",
+    "CalculatorListCol3":"百分比",
+    "CalculatorListCol4":"參考百分比"
+  }, 
+  "transactions": {
+    "SearchText":"搜尋...",
+    "ColumnDate":"日期",
+    "ColumnCategory":"類別",
+    "ColumnDescription":"備註",
+    "ColumnAmount":"金額"
+  },
+  
+      "footer": {
+        "FooterText":"© 2024 Zoe Wang. 版權所有"
+      }
+    }

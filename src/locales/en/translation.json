@@ -1,0 +1,51 @@
+{
+"navbar": {
+  "NavbarTitle":"2021 Canada Travelogue",
+  "NavbarItinerary":"Itinerary",
+  "NavbarTransaction":"Transaction",
+  "NavbarBudgetCalculator":"Budget Calculator"
+}, 
+"dashboard": {
+  "Title": "Dashboard",
+  "CardText1":"Budget",
+  "CardText2":"Expense",
+  "CardText3":"Balance",
+  "CardText4":"Travel days",
+  "TotalExpenseTitle": "Total expense",
+  "ExpenseStatisticsTitle":"Expense Statistics",
+  "RecentTransactionsTitle":"Recent Transactions",
+  "TopExpencesTitle":"Top Expences"
+}
+  ,
+"charts": {
+  "FooterText":"Copyright © Zoe Wang Website 2024"
+},
+"itinerary": {
+  
+},
+"calculator": {
+  "Accommodation":"Accommodation",
+  "Food":"Food & Drink",
+  "Transportation":"Transportation",
+  "Tuition":"Tuition",
+  "Entertainment":"Entertainment",
+  "Shopping":"Shopping",
+  "Insurance":"Insurance",
+  "Other":"Other",
+  "CalculatorListCol1":"Items",
+    "CalculatorListCol2":"Cost Estimates",
+    "CalculatorListCol3":"%",
+    "CalculatorListCol4":"% Reference"
+}, 
+"transactions": {
+  "SearchText":"Search...",
+  "ColumnDate":"Date",
+  "ColumnCategory":"Category",
+  "ColumnDescription":"Description",
+  "ColumnAmount":"Amount"
+},
+
+    "footer": {
+      "FooterText":"Copyright © Zoe Wang Website 2024"
+    }
+  }
