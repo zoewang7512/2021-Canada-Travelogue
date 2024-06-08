@@ -15,13 +15,10 @@
   "ExpenseStatisticsTitle":"Expense Statistics",
   "RecentTransactionsTitle":"Recent Transactions",
   "TopExpencesTitle":"Top Expences"
-}
-  ,
-"charts": {
-  "FooterText":"Copyright © Zoe Wang Website 2024"
 },
-"itinerary": {
-  
+"itinerary":{
+  "PerPerson":"Per person",
+  "TwoPeople":"Two people"
 },
 "calculator": {
   "Accommodation":"Accommodation",
@@ -44,8 +41,14 @@
   "ColumnDescription":"Description",
   "ColumnAmount":"Amount"
 },
-
-    "footer": {
-      "FooterText":"Copyright © Zoe Wang Website 2024"
-    }
+"footer": {
+  "FooterText":"© 2024 Zoe Wang. 版權所有"
+},
+"errorPage":{
+  "ErrorPageLine1":"Oops!",
+  "ErrorPageLine2":"Looks like something's missing.",
+  "ErrorPageLine3":"You may have mistype the address or",
+  "ErrorPageLine4":"the page may have moved.",
+  "ErrorPageLine5":"Go to Home Page"
+}
   }

@@ -1,19 +1,5 @@
 import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
-//mui
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import Avatar from "@mui/material/Avatar";
-
-//tabs
-import Tab from "@mui/material/Tab";
-import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 //firestore
 import {
   collection,
@@ -34,8 +20,17 @@ import {
   InsuranceIcon,
   OtherIcon,
 } from "../Icons/CustomIcon";
+//mui
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
 
-//icon
+
+const HistoryListItem = ({ amount, title, date, category }) => {
+  //icon
 const statusIcon = {
   住宿費用: <AccommodationIcon />,
   飲食費用: <FoodIcon />,
@@ -51,8 +46,6 @@ const statusIcon = {
 function DateString(value) {
   return value && new Date(value.seconds * 1000 + value.nanoseconds / 1000000);
 }
-
-const HistoryListItem = ({ amount, title, date, category }) => {
   return (
     <ListItem
       disableGutters
@@ -141,39 +134,4 @@ const TopExpences = () => {
       );
 };
 
-const History = () => {
-  const [value, setValue] = React.useState("1");
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-  return (
-    <Box
-      sx={{
-        borderBottom: 1,
-        borderColor: "divider",
-        bgcolor: "background.paper",
-      }}
-    >
-      <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <TabList onChange={handleChange}>
-            {/*Recent Transactions */}
-            <Tab label="近期消費紀録" value="1" />
-            {/*Top Expences */}
-            <Tab label="最高支出" value="2" />
-          </TabList>
-        </Box>
-        <TabPanel value="1">
-          <RecentTransactions />
-        </TabPanel>
-        <TabPanel value="2">
-          {/*<TopExpences />*/}
-          <TopExpences />
-        </TabPanel>
-      </TabContext>
-    </Box>
-  );
-};
-//export default History;
-export { History, RecentTransactions,TopExpences };
+export { RecentTransactions,TopExpences };

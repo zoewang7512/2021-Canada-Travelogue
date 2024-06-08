@@ -10,7 +10,7 @@ export default function CalculatorInput({ value, setValue }) {
   return (
     <Input
       type="number"
-      style={{ width: 100 }}
+      style={{ width: 120 }}
       value={value.toString()}
       onChange={handleChange}
       inputProps={{ min: 0, pattern: "[0-9]*" }}

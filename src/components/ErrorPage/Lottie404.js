@@ -1,5 +1,5 @@
 import Lottie from "react-lottie";
-import animationData from "../assets/404.json";
+import animationData from "../../assets/404.json";
 
 export default function Lottie404() {
   const defaultOptions = {

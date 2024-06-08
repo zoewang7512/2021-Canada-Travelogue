@@ -69,7 +69,6 @@ const Navbar = () => {
             </Button>
             <IconButton
               sx={{ ml: 1 }}
-              //onClick={() => setMode(mode === "light" ? "dark" : "light")}
               onClick={handleClick}
               color="inherit"
             >

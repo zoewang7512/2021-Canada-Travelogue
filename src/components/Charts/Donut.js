@@ -1,23 +1,24 @@
 import * as React from "react";
 //i18n
 import {useTranslation } from "react-i18next";
+//mui
 import { PieChart } from "@mui/x-charts/PieChart";
 import { useDrawingArea } from "@mui/x-charts/hooks";
 import { styled } from "@mui/material/styles";
-import { ColorList } from "../../data";
+import { ColorList } from "../Icons/CustomIcon";
 
 const Donut = ({ data }) => {
   const size = {
     height: 250,
   };
 
+  //text in the circle
   const StyledText = styled("text")(({ theme }) => ({
     fill: theme.palette.text.primary,
     textAnchor: "middle",
     dominantBaseline: "central",
     fontSize: 20,
   }));
-
   function PieCenterLabel({ children }) {
     const { width, height, left, top } = useDrawingArea();
     //currencyFormatter
@@ -55,7 +56,7 @@ const Donut = ({ data }) => {
   return (
     <PieChart
       colors={ColorList}
-      series={[{ //data,
+      series={[{ 
         data: PieData,
          innerRadius: 80 }]}
       {...size}

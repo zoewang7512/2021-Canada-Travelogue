@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import dayjs from "dayjs";
-import { LineChart } from "@mui/x-charts/LineChart";
 import { DarkModeContext } from "../../context/ThemeContext";
+
+//mui
+import { LineChart } from "@mui/x-charts/LineChart";
 
 const SimpleLine = ({ data }) => {
 
-  const { mode, toggleMode } = useContext(DarkModeContext);
+  const { mode} = useContext(DarkModeContext);
 
-  //轉變date的格式的function
+  //function to change the date format
   function DateString1(value) {
     const time = value && value.toDate().toLocaleDateString();
     const timedate = dayjs(time).format("YYYY/MM/DD");
@@ -17,10 +19,10 @@ const SimpleLine = ({ data }) => {
   //將轉變好的date放入array內
   const result = data.map((obj) => ({
     ...obj,
-    date: DateString1(obj.date), //obj.date
+    date: DateString1(obj.date), 
   }));
 
-  //計算每天的花費金額 calculate the value each date
+  // calculate the value each day
   const resultByDate = result.reduce((r, { amount, date }) => {
     var temp = r.find((o) => o.date === date);
     if (temp) {
@@ -33,13 +35,12 @@ const SimpleLine = ({ data }) => {
 
   //if resultByDate.length >= 5, sliced the array
  let sliced;
-  if (resultByDate.length >= 5) {
-    sliced = resultByDate.slice(-5);
+  if (resultByDate.length >= 7) {
+    sliced = resultByDate.slice(-7);
   } else {
     sliced = resultByDate;
   }
 
-  //const labels = resultByDate.map((item) => new Date(item.date));
   const labels = sliced.map((item) => new Date(item.date));
 
   const valueFormatter = (date) =>
@@ -47,13 +48,9 @@ const SimpleLine = ({ data }) => {
       month: "2-digit",
       day: "2-digit",
     });
-    //line color
     const colors = mode === "dark"? "#ae8881":"#a22514";
 
   return (
-    <>
-    
-  
       <LineChart
         xAxis={[
           {
@@ -64,18 +61,13 @@ const SimpleLine = ({ data }) => {
         ]}
         series={[
           {
-            //data: [2, 5.5, 2, 8.5, 1.5, 5],
-            //data: resultByDate.map((item) => item.amount),
             data: sliced.map((item) => item.amount),
             color: colors
           }
         ]}
-        
         height={300}
         grid={{ vertical: true, horizontal: true }}
       />
-     
-    </>
   );
 };
 export default SimpleLine;

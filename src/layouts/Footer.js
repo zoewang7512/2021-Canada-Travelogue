@@ -1,6 +1,6 @@
 import {useTranslation } from "react-i18next";
 //components
-import LanguageSelector from "../components/LanguageSelector";
+import LanguageSelector from "./LanguageSelector";
 //mui
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";

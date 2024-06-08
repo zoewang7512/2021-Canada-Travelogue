@@ -15,14 +15,11 @@
     "ExpenseStatisticsTitle":"花費統計",
     "RecentTransactionsTitle":"最近交易紀録",
     "TopExpencesTitle":"最高支出紀録"
-  }
-    ,
-  "charts": {
-    "FooterText":"Copyright © Zoe Wang Website 2024"
   },
-  "itinerary": {
-  
-  },
+  "itinerary":{
+    "PerPerson":"平均毎人",
+    "TwoPeople":"總共兩人"
+},
   "calculator": {
     "Accommodation":"住宿費用",
     "Food":"飲食費用",
@@ -44,8 +41,14 @@
     "ColumnDescription":"備註",
     "ColumnAmount":"金額"
   },
-  
-      "footer": {
-        "FooterText":"© 2024 Zoe Wang. 版權所有"
-      }
+  "footer": {
+    "FooterText":"© 2024 Zoe Wang. 版權所有"
+  },
+  "errorPage":{
+    "ErrorPageLine1":"糟了!",
+    "ErrorPageLine2":"看起來好像少了點什麼",
+    "ErrorPageLine3":"可能打錯了地址，或者",
+    "ErrorPageLine4":"網頁已移至他處",
+    "ErrorPageLine5":"回 到 首 頁"
+  }
     }

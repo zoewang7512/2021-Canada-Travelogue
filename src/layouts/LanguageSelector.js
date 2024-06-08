@@ -12,7 +12,8 @@ import Box from '@mui/material/Box';
 
 
 const LanguageSelector = () => {
-    const [lng, setLng] = React.useState('');
+
+    const [lng, setLng] = useState('');
 
     const handleChange = (event) => {
       setLng(event.target.value);
@@ -24,17 +25,20 @@ const LanguageSelector = () => {
     };
   return (
     <Box >
-    <FormControl sx={{ m: 1, minWidth: 220 }} size="small">
-        <InputLabel id="demo-simple-select-label"><Stack direction="row" spacing={2}><LanguageIcon/>Language</Stack></InputLabel>
-        <Select
-          value={lng}
-          onChange={handleChange}
-          autoWidth
-        >
-          <MenuItem value={10} onClick={() => changeLng("zh")}>繁體中文</MenuItem>
-          <MenuItem value={20} onClick={() => changeLng("en")}>Englich</MenuItem>
-          
-        </Select>
+      <FormControl sx={{ m: 1, minWidth: 220 }} size="small">
+          <InputLabel id="demo-simple-select-label">
+            <Stack direction="row" spacing={2}>
+                <LanguageIcon/><p>Language</p>
+            </Stack>
+          </InputLabel>
+          <Select
+            value={lng}
+            onChange={handleChange}
+            autoWidth
+          >
+            <MenuItem value={10} onClick={() => changeLng("zh")}>繁體中文</MenuItem>
+            <MenuItem value={20} onClick={() => changeLng("en")}>Englich</MenuItem>
+          </Select>
       </FormControl>
   </Box>
   );

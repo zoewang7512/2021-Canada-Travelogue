@@ -83,15 +83,3 @@ export const InitialCost = [
   { id: 7, value: 0, label: "保險費用" },
   { id: 8, value: 0, label: "其他" },
 ];
-
-//color list
-export const ColorList = [
-  "#8fe2c8",
-  "#e68380",
-  "#d1dc4e",
-  "#e2d048",
-  "#b68071",
-  "#3e85f2",
-  "#b35bcc",
-  "#52bad4",
-];

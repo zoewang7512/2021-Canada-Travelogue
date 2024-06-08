@@ -1,6 +1,6 @@
+//mui
 import Avatar from "@mui/material/Avatar";
 //icons
-
 import RestaurantRoundedIcon from "@mui/icons-material/RestaurantRounded";
 import OtherHousesRoundedIcon from "@mui/icons-material/OtherHousesRounded";
 import AirportShuttleRoundedIcon from "@mui/icons-material/AirportShuttleRounded";
@@ -11,11 +11,22 @@ import HealthAndSafetyRoundedIcon from "@mui/icons-material/HealthAndSafetyRound
 import CategoryRoundedIcon from "@mui/icons-material/CategoryRounded";
 
 //multiple components in one js file
-//https://codesandbox.io/s/35vsj?file=/src/App.js:23-73
+
+//color list
+export const ColorList = [
+  "#8fe2c8",
+  "#e68380",
+  "#d1dc4e",
+  "#e2d048",
+  "#b68071",
+  "#3e85f2",
+  "#b35bcc",
+  "#52bad4"
+];
 
 export function AccommodationIcon() {
   return (
-    <Avatar sx={{ bgcolor: "#8fe2c8" }} variant="rounded">
+    <Avatar sx={{ bgcolor: ColorList[0] }} variant="rounded">
       <OtherHousesRoundedIcon />
     </Avatar>
   );
@@ -23,42 +34,42 @@ export function AccommodationIcon() {
 
 export function FoodIcon() {
   return (
-    <Avatar sx={{ bgcolor: "#e68380" }} variant="rounded">
+    <Avatar sx={{ bgcolor: ColorList[1] }} variant="rounded">
       <RestaurantRoundedIcon />
     </Avatar>
   );
 }
 export function TransportationIcon() {
   return (
-    <Avatar sx={{ bgcolor: "#d1dc4e" }} variant="rounded">
+    <Avatar sx={{ bgcolor: ColorList[2] }} variant="rounded">
       <AirportShuttleRoundedIcon />
     </Avatar>
   );
 }
 export function EntertainmentIcon() {
   return (
-    <Avatar sx={{ bgcolor: "#b68071" }} variant="rounded">
+    <Avatar sx={{ bgcolor: ColorList[3] }} variant="rounded">
       <LocalPlayRoundedIcon />
     </Avatar>
   );
 }
 export function TuitionIcon() {
   return (
-    <Avatar sx={{ bgcolor: "#e2d048" }} variant="rounded">
+    <Avatar sx={{ bgcolor: ColorList[4] }} variant="rounded">
       <SchoolRoundedIcon />
     </Avatar>
   );
 }
 export function ShoppingIcon() {
   return (
-    <Avatar sx={{ bgcolor: "#3e85f2" }} variant="rounded">
+    <Avatar sx={{ bgcolor: ColorList[5]}} variant="rounded">
       <LocalMallRoundedIcon />
     </Avatar>
   );
 }
 export function InsuranceIcon() {
   return (
-    <Avatar sx={{ bgcolor: "#b35bcc" }} variant="rounded">
+    <Avatar sx={{ bgcolor: ColorList[6] }} variant="rounded">
       <HealthAndSafetyRoundedIcon />
     </Avatar>
   );
@@ -66,7 +77,7 @@ export function InsuranceIcon() {
 
 export function OtherIcon() {
   return (
-    <Avatar sx={{ bgcolor: "#52bad4" }} variant="rounded">
+    <Avatar sx={{ bgcolor: ColorList[7] }} variant="rounded">
     <CategoryRoundedIcon />
     </Avatar>
   );

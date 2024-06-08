@@ -1,14 +1,14 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
+//components
+import ItineraryCard from "./ItineraryCard";
+import ItineraryTitle from "./ItineraryTitle";
+import { ItineraryCardData } from "./ItineraryCardData";
 //mui
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-//components
-import ItineraryCard from "./ItineraryCard";
-import ItineraryTitle from "./ItineraryTitle";
-//data
-import { ItineraryCardData } from "./ItineraryCardData";
-import { HashLink } from "react-router-hash-link";
+
 
 const ItinerarySectionA = () => {
   return (

@@ -4,28 +4,28 @@ import { useCosts } from "../../context/ShowDataContext";
 //use firestore
 import { collection, query, orderBy } from "@firebase/firestore";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-
 import db from "../../firebase";
+//components
+import ItineraryTimeLine from "./ItineraryTimeLine";
+import ItineraryMap from "./ItineraryMap";
 //mui
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
-//components
-import ItineraryTimeLine from "./ItineraryTimeLine";
-import ItineraryMap from "./ItineraryMap";
 
 const ItinerarySectionC = () => {
+
   const { trip } = useCosts();
   const mapRef = useRef(null);
 
   const q = query(collection(db, trip), orderBy("index", "asc"));
   const [timetable, loading, error] = useCollectionData(q);
-  // console.log(docs);
 
   //fly to function
   const NavigateButton = (a, b) => {
     mapRef.current?.flyTo({ center: [a, b], zoom: 13, essential: true });
   };
+
   return (
     <section id="C">
       <Box
@@ -42,7 +42,6 @@ const ItinerarySectionC = () => {
           {/*TimeLine Area */}
           <Grid item xs={12} sm={5}>
             <Box sx={{ height: "80vh", overflow: "auto" }}>
-              {/** {VictoriaData.map((item, index) => {*/}
               {timetable?.map((item) => {
                 return (
                   <div key={item.id}>
@@ -55,7 +54,6 @@ const ItinerarySectionC = () => {
               })}
             </Box>
           </Grid>
-
           {/*Mapbox Area */}
           <Grid item xs={12} sm={7}>
             <ItineraryMap mapRef={mapRef} />

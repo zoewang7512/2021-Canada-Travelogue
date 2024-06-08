@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
+//firestore
+import { collection, onSnapshot } from "@firebase/firestore";
+import db from "../firebase";
 //i18n
 import {useTranslation } from "react-i18next";
+//components
+import Dot from "../components/Icons/Dot";
 //mui
 import Container from "@mui/material/Container";
 import { DataGrid } from "@mui/x-data-grid";
@@ -11,11 +16,7 @@ import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-//components
-import Dot from "../components/Icons/Dot";
-//firestore
-import { collection, onSnapshot } from "@firebase/firestore";
-import db from "../firebase";
+
 
 const Transactions = () => {
 
@@ -47,10 +48,6 @@ const Transactions = () => {
       headerName: ColumnDate,
       minWidth: 120,
       flex: 0.5,
-      //type: "dateTime",
-      //valueGetter: (value) => value && new Date(value),
-      //valueGetter: ({ value }) =>
-        //value && new Date(value.seconds * 1000 + value.nanoseconds / 1000000),
       valueGetter: ( value) =>
         dayjs( value && new Date(value.seconds * 1000 + value.nanoseconds / 1000000)).format("YYYY/MM/DD")
     },
@@ -86,7 +83,6 @@ const Transactions = () => {
       }).format(
         value,
       )
-  
     },
   ];
 
@@ -115,14 +111,10 @@ const Transactions = () => {
           <Paper>
             <DataGrid
               rows={filteredData}
-              //rows={trans}
               columns={columns}
               initialState={{
-                pagination: {
-                  paginationModel: { page: 0, pageSize: 10 },
-                },
+                pagination: { paginationModel: { pageSize: 10 } },
               }}
-              pageSizeOptions={[5, 10]}
               checkboxSelection
             />
           </Paper>

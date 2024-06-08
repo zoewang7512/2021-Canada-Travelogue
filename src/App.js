@@ -1,8 +1,5 @@
-
-import './App.css';
 import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { DarkModeContext } from "./context/ThemeContext";
 //pages
 import Navbar from "./layouts/Navbar";
@@ -11,10 +8,9 @@ import Home from "./pages/Home";
 import Transactions from "./pages/Transactions";
 import Itinerary from "./pages/Itinerary";
 import Calculator from "./pages/Calculator";
-import ErrorPage from "./pages/ErrroPage";
-//test
-import TestPage from "./pages/TestPage";
+import ErrorPage from "./pages/ErrorPage";
 //mui
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Fade from "@mui/material/Fade";
 import Toolbar from "@mui/material/Toolbar";
@@ -115,8 +111,6 @@ function App(props) {
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/itinerary" element={<Itinerary />} />
             <Route path="/calculator" element={<Calculator />} />
-            <Route path="/test" element={<TestPage />} />
-            
             <Route path='*' element={<ErrorPage />}/>
           </Routes>
           <Footer />
@@ -127,7 +121,6 @@ function App(props) {
           </ScrollTop>
           </ThemeProvider>
           </BrowserRouter>
-  
     </div>
   );
 }

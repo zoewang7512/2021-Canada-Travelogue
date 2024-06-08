@@ -1,9 +1,10 @@
-//mui
-import Box from "@mui/material/Box";
 //components
 import ItinerarySectionA from "../components/Itinerary/ItinerarySectionA";
 import ItinerarySectionB from "../components/Itinerary/ItinerarySectionB";
 import ItinerarySectionC from "../components/Itinerary/ItinerarySectionC";
+//mui
+import Box from "@mui/material/Box";
+
 
 const Itinerary = () => {
   return (

@@ -4,17 +4,17 @@ import { collection, orderBy, query } from "firebase/firestore";
 import db from "../../firebase";
 //react-firestore-hooks
 import { useCollectionData } from "react-firebase-hooks/firestore";
-//mui
-import Icon from "@mui/material/Icon";
-import Box from "@mui/material/Box";
 //react-map-gl
 import { Marker, Popup } from "react-map-gl";
 //components
 import ItineraryPopup from "./ItineraryPopup";
-//data
-import { ColorList } from "./ItineraryCardData";
+import { ColorList } from "../Icons/CustomIcon";
+//mui
+import Icon from "@mui/material/Icon";
+import Box from "@mui/material/Box";
 
 const ItineraryMarker = ({ path }) => {
+  
   const [selected, setSelected] = useState(false);
   const q = query(collection(db, path), orderBy("eventId", "asc"));
   const [item, loading, error] = useCollectionData(q);
@@ -27,7 +27,6 @@ const ItineraryMarker = ({ path }) => {
           latitude={b.latitude}
           onClick={() => {
             setSelected(b);
-            //setShowPopup(true);
           }}
         >
           {/*Dynamic icon size*/}
@@ -42,7 +41,6 @@ const ItineraryMarker = ({ path }) => {
           latitude={selected.latitude}
           anchor="bottom"
           closeOnClick={false}
-          //onClose={() => setShowPopup(false)}
           onClose={() => setSelected(null)}
         >
           {/*Custom Popup design */}

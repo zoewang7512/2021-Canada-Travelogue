@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 //useContext
 import { useCosts } from "../../context/ShowDataContext";
+//i18n
+import {useTranslation } from "react-i18next";
+//charts
+import Donut from "../Charts/Donut";
+import DonutTableItem from "../Charts/DonutTableItem";
 //mui
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -12,11 +17,14 @@ import Typography from "@mui/material/Typography";
 import Table from "@mui/material/Table";
 import { tableCellClasses } from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
-//chart
-import Donut from "../Charts/Donut";
-import DonutTableItem from "../Charts/DonutTableItem";
+
 
 const ItinerarySectionB = () => {
+
+ //i18n
+ const { t } = useTranslation();
+ const {PerPerson,TwoPeople} =t('itinerary');
+
   const { title, cost } = useCosts();
   const [showData, setShowData] = useState(cost);
 
@@ -53,44 +61,37 @@ const ItinerarySectionB = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-         
         }}
       >
         <Typography variant="h4">
           {title}
         </Typography>
         <ButtonGroup variant="outlined" size="large" color="primary"  sx={{ my: 4 }}>
-                <Button onClick={onClickSum} startIcon={<GroupIcon />}>
-                  Two people
-                </Button>
-                <Button
-                  onClick={onClickAvg}
-                  startIcon={<AccessibilityNewIcon />}
-                >
-                  Per person
-                </Button>
-              </ButtonGroup>
-          
+          <Button onClick={onClickSum} startIcon={<GroupIcon />}>
+            {TwoPeople}
+          </Button>
+          <Button onClick={onClickAvg} startIcon={<AccessibilityNewIcon />}>
+            {PerPerson}
+          </Button>
+        </ButtonGroup>
           <Grid container spacing={2}   alignItems="center">
-            <Grid item xs={12} sm={6}>
             {/*Chart Area*/}
-              <Donut data={showData} />
-              </Grid>
             <Grid item xs={12} sm={6}>
-        
-          <Table size="small" aria-label="a dense table"
-                   sx={{ maxWidth: 480,[`& .${tableCellClasses.root}`]: { borderBottom: "none"}, }}
-                  >
-                    <TableBody>
+              <Donut data={showData} />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Table size="small" aria-label="a dense table"
+                      sx={{ maxWidth: 480,[`& .${tableCellClasses.root}`]: { borderBottom: "none"}, }}>
+                  <TableBody>
                     {showData.map((item, index) => {
                       return (
-                        <DonutTableItem index={index} item={item} sum={total} fontsize={"0.8rem"}/>
-                      );
-                    })}
-                    </TableBody>
-                  </Table>
-                  </Grid>
-                  </Grid>
+                            <DonutTableItem index={index} item={item} sum={total} fontsize={"0.8rem"}/>
+                          );
+                      })}
+                  </TableBody>
+              </Table>
+            </Grid>
+          </Grid>
       </Box>
     </section>
   );

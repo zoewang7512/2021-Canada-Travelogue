@@ -1,3 +1,6 @@
+  //i18n
+  import {useTranslation } from "react-i18next";
+  //components
 import {
     AccommodationIcon,
     FoodIcon,
@@ -8,12 +11,11 @@ import {
     InsuranceIcon,
     OtherIcon
   } from "./CustomIcon";
+  //mui
   import Box from "@mui/material/Box";
-  //i18n
-import {useTranslation } from "react-i18next";
 
   
-  const Dot = ({ category }) => {
+const Dot = ({ category }) => {
      //i18n
  const { t } = useTranslation();
  const {Accommodation,Food,Transportation,Tuition,Entertainment,Shopping,Insurance,Other} =t('calculator');

@@ -5,23 +5,22 @@ import { useCosts } from "../../context/ShowDataContext";
 import db from "../../firebase";
 import { collection, query, orderBy } from "@firebase/firestore";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-
 //mapbox
-import MapBox, { NavigationControl } from "react-map-gl";
+import  Map , { NavigationControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-//
+//components
 import ItineraryMarker from "./ItineraryMarker";
-import { APIkey } from "./mapboxKey";
+
 
 const ItineraryMap = ({ mapRef }) => {
+
   const { trip } = useCosts();
   const q = query(collection(db, trip), orderBy("index", "asc"));
   const [timetable, loading, error] = useCollectionData(q);
-
+  
   return (
-    <MapBox
-      //id="myMapA"
-      mapboxAccessToken={APIkey}
+    <Map
+     mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
       initialViewState={{
         longitude: -123.113952,
         latitude: 49.2608724,
@@ -32,6 +31,7 @@ const ItineraryMap = ({ mapRef }) => {
       mapStyle="mapbox://styles/zoewang0401/cllq8pn4v003h01r60p2r5ofw"
       style={{ width: "100%", height: "90vh" }}
       ref={mapRef}
+      mapLib={import('mapbox-gl')}
     >
       <NavigationControl position="top-left" />
       {timetable?.map((item) => {
@@ -41,7 +41,7 @@ const ItineraryMap = ({ mapRef }) => {
           </div>
         );
       })}
-    </MapBox>
+    </Map>
   );
 };
 export default ItineraryMap;

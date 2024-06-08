@@ -1,9 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 //firestore
 import { collection, orderBy, query } from "firebase/firestore";
 import db from "../../firebase";
 //react-firestore-hooks
 import { useCollectionData } from "react-firebase-hooks/firestore";
+//components
+import { ColorList } from "../Icons/CustomIcon";
 //mui
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -13,14 +15,12 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-//icons
 import Icon from "@mui/material/Icon";
-//data
-import { ColorList } from "./ItineraryCardData";
+
 
 const ItineraryTimeLineItem = ({ path, NavigateButton }) => {
+
   const q = query(collection(db, path), orderBy("eventId", "asc"));
-  //const options = { idField:  };
   const [item, loading, error] = useCollectionData(q);
 
   return (
@@ -41,25 +41,23 @@ const ItineraryTimeLineItem = ({ path, NavigateButton }) => {
             onClick={() => NavigateButton(b.longitude, b.latitude)}
           >
             <TimelineItem>
-              {/*左邊*/}
+              {/*Left*/}
               <TimelineOppositeContent
                 sx={{ m: "auto 0" }}
                 align="right"
                 variant="body2"
-                //color="text.secondary"
               >
                 {b.time}
               </TimelineOppositeContent>
-              {/*中間的圖案*/}
+              {/*Center*/}
               <TimelineSeparator>
                 <TimelineConnector />
-                {/*<TimelineDot sx={{ bgcolor: iconColor }}>{b.icon}</TimelineDot>*/}
                 <TimelineDot sx={{ bgcolor: ColorList[b.iconType] }}>
                   <Icon>{b.icon}</Icon>
                 </TimelineDot>
                 <TimelineConnector />
               </TimelineSeparator>
-              {/*右邊*/}
+              {/*Right*/}
               <TimelineContent sx={{ py: "12px", px: 2 }}>
                 <Typography variant="subtitle1" component="span">
                   {b.action}

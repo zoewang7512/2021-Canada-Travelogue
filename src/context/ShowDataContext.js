@@ -1,21 +1,10 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
-
-/*import {
-  VictoriaData,
-  WhiteHorse1Data,
-  WhiteHorse2Data,
-  SeattleData,
-  LA1Data,
-  LAXData,
-  LA2Data,
-} from "../data";
-*/
-
-import { InitialCost } from "../components/Itinerary/ItineraryCardData";
-
 //use for costs data
 import { collection, onSnapshot, query, orderBy } from "@firebase/firestore";
 import db from "../firebase";
+//components
+import { InitialCost } from "../components/Itinerary/ItineraryCardData";
+
 
 const SDataContext = createContext();
 
@@ -46,9 +35,6 @@ function SDataProvider(props) {
   const [title, setTitle] = useState("Victoria");
   const [cost, setCost] = useState(InitialCost);
   const [trip, setTrip] = useState("Victoria1Trip");
-  const [timetable, setTimeTable] = useState([]);
-  // const [timetable, setTimeTable] = useState(VictoriaData);
-  //const [timetable, setTimeTable] = useState([]);
 
   //之後需要優化的部分
   useEffect(() => {
@@ -118,44 +104,38 @@ function SDataProvider(props) {
         setTitle("Victoria");
         setCost(VictoriaCost);
         setTrip("Victoria1Trip");
-        //setTimeTable(VictoriaData);
         break;
       case 2:
         setTitle("Whitehorse");
         setCost(WhiteHorse1Cost);
         setTrip("WhiteHorse1Trip");
-        //setTimeTable(WhiteHorse1Data);
         break;
       case 3:
         setTitle("Whitehorse");
         setCost(WhiteHorse2Cost);
         setTrip("WhiteHorse2Trip");
-        //setTimeTable(WhiteHorse2Data);
         break;
       case 4:
         setTitle("Seattle");
         setCost(SeattleCost);
         setTrip("SeattleTrip");
-        //setTimeTable(SeattleData);
         break;
       case 5:
         setTitle("L.A.");
         setCost(LA1Cost);
         setTrip("LA1Trip");
-        //setTimeTable(LA1Data);
         break;
       case 6:
         setTitle("Las Vegas");
         setCost(LAXCost);
         setTrip("LAXTrip");
-        //setTimeTable(LAXData);
         break;
       case 7:
         setTitle("L.A.");
         setCost(LA2Cost);
         setTrip("LA2Trip");
-        //setTimeTable(LA2Data);
         break;
+
       default:
         return null;
     }
@@ -169,7 +149,6 @@ function SDataProvider(props) {
           toggleTitle,
           cost,
           trip,
-          timetable,
         }}
       >
         {props.children}
