@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/2021-Canada-Travelogue/static/css/main.ccc2293b.css",
+    "main.js": "/2021-Canada-Travelogue/static/js/main.602a8855.js",
+    "static/js/453.ad02f82e.chunk.js": "/2021-Canada-Travelogue/static/js/453.ad02f82e.chunk.js",
+    "static/js/879.6b0b25b0.chunk.js": "/2021-Canada-Travelogue/static/js/879.6b0b25b0.chunk.js",
+    "static/media/universal.png": "/2021-Canada-Travelogue/static/media/universal.93e644cfae47ef3970bf.png",
+    "static/media/island.png": "/2021-Canada-Travelogue/static/media/island.998e5bb517644a541c0e.png",
+    "static/media/space-needle.png": "/2021-Canada-Travelogue/static/media/space-needle.e2f4f99f134c10c17139.png",
+    "static/media/island-d.png": "/2021-Canada-Travelogue/static/media/island-d.a2943a730add6e9c60f0.png",
+    "static/media/universal-d.png": "/2021-Canada-Travelogue/static/media/universal-d.8632fee8aefa272bb43f.png",
+    "static/media/dog-sled.png": "/2021-Canada-Travelogue/static/media/dog-sled.2d795bf30f5c65632d4d.png",
+    "static/media/northern-lights.png": "/2021-Canada-Travelogue/static/media/northern-lights.623b660693ff3becd4a2.png",
+    "static/media/hollywood.png": "/2021-Canada-Travelogue/static/media/hollywood.2813d058551c1612eeab.png",
+    "static/media/northern-lights-white.png": "/2021-Canada-Travelogue/static/media/northern-lights-white.8c86590f8dd468f77d09.png",
+    "static/media/space-needle-d.png": "/2021-Canada-Travelogue/static/media/space-needle-d.e6f93b5ee61071b7984e.png",
+    "static/media/slot-machine.png": "/2021-Canada-Travelogue/static/media/slot-machine.fd695221f8b38405fb6c.png",
+    "static/media/dog-sled-d.png": "/2021-Canada-Travelogue/static/media/dog-sled-d.8b622ca637266d28a682.png",
+    "static/media/slot-machine-d.png": "/2021-Canada-Travelogue/static/media/slot-machine-d.5fce0f7bc1a02c8e6527.png",
+    "static/media/hollywood-d.png": "/2021-Canada-Travelogue/static/media/hollywood-d.96e4aa37be8b6f99d2fc.png",
+    "index.html": "/2021-Canada-Travelogue/index.html",
+    "main.ccc2293b.css.map": "/2021-Canada-Travelogue/static/css/main.ccc2293b.css.map",
+    "main.602a8855.js.map": "/2021-Canada-Travelogue/static/js/main.602a8855.js.map",
+    "453.ad02f82e.chunk.js.map": "/2021-Canada-Travelogue/static/js/453.ad02f82e.chunk.js.map",
+    "879.6b0b25b0.chunk.js.map": "/2021-Canada-Travelogue/static/js/879.6b0b25b0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccc2293b.css",
+    "static/js/main.602a8855.js"
+  ]
+}
