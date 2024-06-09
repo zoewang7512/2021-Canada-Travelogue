@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route ,Navigate } from "react-router-dom";
 import { DarkModeContext } from "./context/ThemeContext";
 //pages
 import Navbar from "./layouts/Navbar";
@@ -111,7 +111,9 @@ function App(props) {
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/itinerary" element={<Itinerary />} />
             <Route path="/calculator" element={<Calculator />} />
-            <Route path='*' element={<ErrorPage />}/>
+            {/*<Route path='*' element={<ErrorPage />}/>*/}
+            <Route path='/404' element={<ErrorPage/>} />
+            <Route path='*' element={<Navigate replace to='/404'/>} />
           </Routes>
           <Footer />
           <ScrollTop {...props}>
