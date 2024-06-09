@@ -107,10 +107,10 @@ function App(props) {
           <CssBaseline />
           <Toolbar id="back-to-top-anchor" />
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/transactions" element={<Transactions />} />
-            <Route path="/itinerary" element={<Itinerary />} />
-            <Route path="/calculator" element={<Calculator />} />
+            <Route path="/2021-Canada-Travelogue" element={<Home />} />
+            <Route path="/2021-Canada-Travelogue/transactions" element={<Transactions />} />
+            <Route path="/2021-Canada-Travelogue/itinerary" element={<Itinerary />} />
+            <Route path="/2021-Canada-Travelogue/calculator" element={<Calculator />} />
             <Route path='*' element={<ErrorPage />}/>
           </Routes>
           <Footer />
