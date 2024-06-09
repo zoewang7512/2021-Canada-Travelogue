@@ -13,6 +13,7 @@
   "CardText4":"Travel days",
   "TotalExpenseTitle": "Total expense",
   "ExpenseStatisticsTitle":"Expense Statistics",
+  "ExpenseStatisticsChip":"Last 7 records",
   "RecentTransactionsTitle":"Recent Transactions",
   "TopExpencesTitle":"Top Expences"
 },

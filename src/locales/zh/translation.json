@@ -13,6 +13,7 @@
     "CardText4":"旅行天數",
     "TotalExpenseTitle": "總花費",
     "ExpenseStatisticsTitle":"花費統計",
+    "ExpenseStatisticsChip":"最近 7 項紀録",
     "RecentTransactionsTitle":"最近交易紀録",
     "TopExpencesTitle":"最高支出紀録"
   },

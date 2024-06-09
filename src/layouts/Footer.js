@@ -7,6 +7,7 @@ import Stack from "@mui/material/Stack";
 
 
 const Footer = () => {
+  
   const { t } = useTranslation();
   const {FooterText} =t('footer');
 

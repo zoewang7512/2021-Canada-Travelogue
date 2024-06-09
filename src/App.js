@@ -53,12 +53,12 @@ function ScrollTop(props) {
 
 
 function App(props) {
+
   const { mode } = useContext(DarkModeContext);
   const darkTheme = createTheme({
     typography: {
       fontFamily: ["Short Stack", "Zen Maru Gothic", "cursive"].join(","),
     },
-   
     palette: {
       mode: mode,
       ...(mode === "light"

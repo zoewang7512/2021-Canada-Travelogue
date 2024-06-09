@@ -8,6 +8,7 @@ import { styled } from "@mui/material/styles";
 import { ColorList } from "../Icons/CustomIcon";
 
 const Donut = ({ data }) => {
+  
   const size = {
     height: 250,
   };

@@ -29,7 +29,7 @@ import TableBody from "@mui/material/TableBody";
 const Home = () => {
   
   const { t } = useTranslation();
-  const {Title,CardText1,CardText2,CardText3,CardText4,TotalExpenseTitle,ExpenseStatisticsTitle,RecentTransactionsTitle,TopExpencesTitle} =t('dashboard');
+  const {Title,CardText1,CardText2,CardText3,CardText4,TotalExpenseTitle,ExpenseStatisticsTitle,RecentTransactionsTitle,TopExpencesTitle,ExpenseStatisticsChip} =t('dashboard');
 
   const [startday, setStartday] = useState(dayjs("2021-11-01"));
   const [endday, setEndday] = useState(dayjs("2022-03-31"));
@@ -40,6 +40,7 @@ const Home = () => {
       id: "initial",
     },
   ]);
+
   //get the Transactions from db
   useEffect(() => {
     const collectionRef = collection(db, "Transactions");
@@ -56,7 +57,6 @@ const Home = () => {
     );
     return unsub;
   }, [startday, endday]);
-
 
   //calculate the result
   function calculateDaysBetweenDates(startDate, endDate) {
@@ -93,7 +93,6 @@ const Home = () => {
     { id: 6, label: "保險費用" },
     { id: 7, label: "其他" },
   ];
-
   const result2 = arr2.map((e) => {
     for (let element of result) {
       if (e.label === element.category)
@@ -195,7 +194,7 @@ const Home = () => {
               <CardContent>
               <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent= 'space-between' alignItems= {{ xs: 'flex-start', sm: 'center' }}>
                 <Typography variant="subtitle1" >{ExpenseStatisticsTitle}</Typography>
-                <Chip label="Last 7 days"  color="primary"/>
+                <Chip label={ExpenseStatisticsChip} color="primary"/>
                 </Stack>
                   <SimpleLine data={filterTrans}/>
               </CardContent>

@@ -13,7 +13,6 @@ const resources = {
   },
 };
 
-
 i18n.use(initReactI18next)
 .use(LanguageDetector)
 .init({

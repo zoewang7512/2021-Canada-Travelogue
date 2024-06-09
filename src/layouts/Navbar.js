@@ -18,6 +18,7 @@ import IconButton from "@mui/material/IconButton";
 
 
 const Navbar = () => {
+
   const { t } = useTranslation();
   const {NavbarTitle,NavbarItinerary,NavbarTransaction,NavbarBudgetCalculator} =t('navbar');
 
