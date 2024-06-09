@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { DarkModeContext } from "./context/ThemeContext";
 //pages
 import Navbar from "./layouts/Navbar";
@@ -101,16 +101,16 @@ function App(props) {
   });
   return (
     <div className="App">
-       <BrowserRouter>
+       <HashRouter>
        <ThemeProvider theme={darkTheme}>
        <Navbar />
           <CssBaseline />
           <Toolbar id="back-to-top-anchor" />
         <Routes>
-            <Route path="/2021-Canada-Travelogue" element={<Home />} />
-            <Route path="/2021-Canada-Travelogue/transactions" element={<Transactions />} />
-            <Route path="/2021-Canada-Travelogue/itinerary" element={<Itinerary />} />
-            <Route path="/2021-Canada-Travelogue/calculator" element={<Calculator />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/transactions" element={<Transactions />} />
+            <Route path="/itinerary" element={<Itinerary />} />
+            <Route path="/calculator" element={<Calculator />} />
             <Route path='*' element={<ErrorPage />}/>
           </Routes>
           <Footer />
@@ -120,7 +120,7 @@ function App(props) {
             </Fab>
           </ScrollTop>
           </ThemeProvider>
-          </BrowserRouter>
+          </HashRouter>
     </div>
   );
 }
