@@ -29,7 +29,7 @@ import TableBody from "@mui/material/TableBody";
 const Home = () => {
   
   const { t } = useTranslation();
-  const {Title,CardText1,CardText2,CardText3,CardText4,TotalExpenseTitle,ExpenseStatisticsTitle,RecentTransactionsTitle,TopExpencesTitle,ExpenseStatisticsChip} =t('dashboard');
+  const {Title,CardText1,CardText2,CardText3,CardText4,CardText5,TotalExpenseTitle,ExpenseStatisticsTitle,RecentTransactionsTitle,TopExpencesTitle,ExpenseStatisticsChip} =t('dashboard');
 
   const [startday, setStartday] = useState(dayjs("2021-11-01"));
   const [endday, setEndday] = useState(dayjs("2022-03-31"));
@@ -126,7 +126,7 @@ const Home = () => {
             />
           </Grid>
           {/*4 card area */}
-          <Grid item xs={6} md={3}>
+          <Grid item xs={6} md={12/5}>
             <DashboardCard
               icon={"request_quote"}
               amount={formatter.format(budget)}
@@ -134,7 +134,7 @@ const Home = () => {
               color={"#488ecd"}
             />
           </Grid>
-          <Grid item xs={6} md={3}>
+          <Grid item xs={6} md={12/5}>
             <DashboardCard
               icon={"attach_money"}
               amount={formatter.format(costs)}
@@ -142,7 +142,7 @@ const Home = () => {
               color={"#e68380"}
             />
           </Grid>
-          <Grid item xs={6} md={3}>
+          <Grid item xs={6} md={12/5}>
             <DashboardCard
               icon={"savings"}
               amount={formatter.format(balance)}
@@ -150,12 +150,20 @@ const Home = () => {
               color={"#88eccf"}
             />
           </Grid>
-          <Grid item xs={6} md={3}>
+          <Grid item xs={6} md={12/5}>
             <DashboardCard
               icon={"calendar_today"}
               amount={days}
               text={CardText4}
               color={"#52bad4"}
+            />
+          </Grid>
+          <Grid item xs={12} md={12/5}>
+            <DashboardCard
+              icon={"hail"}
+              amount={2}
+              text={CardText5}
+              color={"#e2d048"}
             />
           </Grid>
           {/*Pie Chart Area*/}

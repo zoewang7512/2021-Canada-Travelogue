@@ -11,6 +11,7 @@
   "CardText2":"Expense",
   "CardText3":"Balance",
   "CardText4":"Travel days",
+  "CardText5":"Members",
   "TotalExpenseTitle": "Total expense",
   "ExpenseStatisticsTitle":"Expense Statistics",
   "ExpenseStatisticsChip":"Last 7 records",
