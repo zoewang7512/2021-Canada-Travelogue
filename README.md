@@ -10,11 +10,6 @@ A website to track travel costs and itineraries from November 2021 to March 2022
 https://zoewang7512.github.io/2021-Canada-Travelogue/
 
 
-## 網站地圖 Site Map
-
-
-
-
 
 # Getting Started with Create React App
 
