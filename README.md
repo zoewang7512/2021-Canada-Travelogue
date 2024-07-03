@@ -12,8 +12,12 @@ A website to track travel costs and itineraries from November 2021 to March 2022
 
 ## 畫面截圖
 
-<img src="images/screenshot1.png" alt="screenshot1" width="500" height="279"> <img src="images/screenshot2.png" alt="screenshot2" width="500" height="279">
-<img src="images/screenshot3.png" alt="screenshot3" width="500" height="279"> <img src="images/screenshot4.png" alt="screenshot4" width="500" height="279">
+| | | 
+|:-------------------------:|:-------------------------:|
+|<img src="images/screenshot1.png" alt="screenshot1" width="500" height="279"> |  <img src="images/screenshot2.png" alt="screenshot2" width="500" height="279"> |
+|<img src="images/screenshot3.png" alt="screenshot3" width="500" height="279"> | <img src="images/screenshot4.png" alt="screenshot4" width="500" height="279">  | 
+
+
 
 
 ## 安裝
