@@ -1,83 +1,63 @@
-# 貳零貳壹 加拿大遊記 2021-Canada-Travelogue
+# 貳零貳壹 加拿大遊記
 
 本網站是一個專門用於記錄2021年11月至2022年3月在美加旅遊的各項花費和行程的平台。
 
 A website to track travel costs and itineraries from November 2021 to March 2022 in the United States and Canada.
 
 
-## 網站連結 Website Link:
+## 試用 Demo
 
-https://zoewang7512.github.io/2021-Canada-Travelogue/
+請點擊連結 [https://zoewang7512.github.io/2021-Canada-Travelogue/](https://zoewang7512.github.io/2021-Canada-Travelogue/) 試用 demo
 
 
+## 畫面截圖
 
-# Getting Started with Create React App
+<img src="images/screenshot1.png" alt="screenshot1" width="500" height="279"> <img src="images/screenshot2.png" alt="screenshot2" width="500" height="279">
+<img src="images/screenshot3.png" alt="screenshot3" width="500" height="279"> <img src="images/screenshot4.png" alt="screenshot4" width="500" height="279">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 安裝
 
-In the project directory, you can run:
+以下將會引導你如何安裝此專案到你的電腦上。
 
-### `npm start`
+Node.js 版本建議為：`v20.11.1` 以上...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 取得專案
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone https://github.com/zoewang7512/2021-Canada-Travelogue.git
+```
 
-### `npm test`
+### 移動到專案內
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+cd 2021-Canada-Travelogue
+```
 
-### `npm run build`
+### 安裝套件
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 運行專案
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
+### 發佈專案
 
-### `npm run eject`
+```bash
+npm run deploy
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 專案技術
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Node.js v20.11.1
+- react v18.2.0
+- react-router-dom v6.22.3
+- @mui/material v5.15.15
+- i18next v1.7.2
+- firebase v10.11.0
+- react-map-gl v7.1.7
+- gh-pages v6.1.1
